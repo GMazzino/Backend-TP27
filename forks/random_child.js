@@ -14,7 +14,6 @@ const rndNumbers = (quantity) => {
 };
 
 process.on('message', (quantity) => {
-  console.log(`Ingrese al child\nquantity: ${quantity}`);
   const numbers = rndNumbers(quantity);
   process.send(numbers);
   process.exit();
